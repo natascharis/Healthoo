@@ -34,19 +34,15 @@ with open('aktivitaeten.json') as open_file:
     json_als_string = open_file.read()
     mein_eingelesenes_dict = loads(json_als_string)
 woche = reversed(auswertungen.wochentag_definieren())
-kcal = reversed(auswertungen.auswerten_letzteWoche(mein_eingelesenes_dict))
+kcal = reversed((auswertungen.auswerten_letzteWoche(mein_eingelesenes_dict)))
 
 def data():
 
     df = pd.DataFrame(list(zip(woche,kcal)), columns = ['Wochentag','Kcal'])
     return df
 magnesium = auswertungen.auswerten_magnesium_woche(mein_eingelesenes_dict)
-rest = 2100 - magnesium
-liste = []
-liste.append(magnesium)
-liste.append(rest)
 def data2():
-    df2 = pd.DataFrame(liste, columns=["Wert"])
+    df2 = pd.DataFrame(magnesium, columns=["Wert"])
     return df2
 
 def viz():
@@ -54,7 +50,7 @@ def viz():
 
     fig = px.bar(
         df,
-        x='Wochentag', y='Kcal',
+        x='Wochentag', y='Kcal', title="Gegessene Kcal",
         labels={
             'Wochentag': 'Wochentag',
             'Kcal': 'Kcal'
@@ -68,7 +64,7 @@ def viz():
 def viz2():
     df2 = data2()
     name = ['Magnesium', "Fehlt bis zur Deckung"]
-    fig = px.pie(df2,values="Wert",names=name)
+    fig = px.pie(df2,values="Wert",names=name,title="Deckung von Magnesium")
 
     div2 = plot(fig, output_type="div")
     return div2

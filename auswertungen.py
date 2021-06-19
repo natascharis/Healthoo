@@ -163,25 +163,79 @@ def auswerten_letzteWoche (json):
 def auswerten_magnesium_woche(json):
     woche = aktuellesDatum - datetime.timedelta(days=7)
     magnesium=0
+    bedarf=2100
+
     for key, value in json.items():
         #Es werden nur Werte die in der letzten Woche hinzugefügt wurden berücksichtigt
         if key > str(woche):
             print(magnesiumdict[str(value[0])])
             magnesium+=((int(magnesiumdict[str(value[0])]))/100* int(value[1]))
-    return magnesium
+    liste=[magnesium,bedarf-magnesium]
+    return liste
 
+def auswerten_retinol(json):
+    woche = aktuellesDatum - datetime.timedelta(days=7)
+    retinol=0
+    bedarf=7000
+
+    for key, value in json.items():
+        #Es werden nur Werte die in der letzten Woche hinzugefügt wurden berücksichtigt
+        if key > str(woche):
+            print(retinoldict[str(value[0])])
+            retinol+=((int(retinoldict[str(value[0])]))/100* int(value[1]))
+    liste=[retinol,bedarf-retinol]
+    return liste
+
+def auswerten_vitc(json):
+    woche = aktuellesDatum - datetime.timedelta(days=7)
+    vitc=0
+    bedarf=665
+
+    for key, value in json.items():
+        #Es werden nur Werte die in der letzten Woche hinzugefügt wurden berücksichtigt
+        if key > str(woche):
+            print(vitamincdict[str(value[0])])
+            vitc +=((int(vitamincdict[str(value[0])]))/100* int(value[1]))
+    liste=[vitc,bedarf-vitc]
+    return liste
+
+def auswerten_vitb1(json):
+    woche = aktuellesDatum - datetime.timedelta(days=7)
+    vitb1=0
+    bedarf=7
+
+    for key, value in json.items():
+        #Es werden nur Werte die in der letzten Woche hinzugefügt wurden berücksichtigt
+        if key > str(woche):
+            print(vitaminb1dict[str(value[0])])
+            vitb1 +=((int(vitaminb1dict[str(value[0])]))/100* int(value[1]))
+    liste=[ vitb1,bedarf- vitb1]
+    return liste
+
+def auswerten_kalium(json):
+    woche = aktuellesDatum - datetime.timedelta(days=7)
+    kalium=0
+    bedarf=28000
+
+    for key, value in json.items():
+        #Es werden nur Werte die in der letzten Woche hinzugefügt wurden berücksichtigt
+        if key > str(woche):
+            print(kaliumdict[str(value[0])])
+            kalium +=((int(kaliumdict[str(value[0])]))/100* int(value[1]))
+    liste=[ kalium,bedarf- kalium]
+    return liste
 
 def wochentag_definieren():
     tag = datetime.datetime.today().weekday()
-    tag2=0
+    tag2=6
     #Es soll eine Liste von Tagen gefüllt werden angefangen mit dem Aktuellen tag
     reihenfolge=[]
-    while tag <=6:
+    while tag >=0:
         reihenfolge.append(tag)
-        tag =tag+1
+        tag =tag-1
     while (len(reihenfolge))<=6:
         reihenfolge.append(tag2)
-        tag2 = tag2 + 1
+        tag2 = tag2 -1
         print(reihenfolge)
         wochentag=[]
         weekdays={0:"Montag",1:"Dienstag",2:"Mittwoch",3:"Donnerstag",4:"Freitag",5:"Samstag",6:"Sonntag"}
@@ -201,4 +255,5 @@ with open('aktivitaeten.json') as open_file:
 
 auswerten_magnesium_woche(mein_eingelesenes_dict)
 
+wochentag_definieren()
 
