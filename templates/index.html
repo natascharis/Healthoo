@@ -1,0 +1,22 @@
+!DOCTYPE html>
+
+
+<html lang="de">
+	<head>
+		<meta charset="utf-8">
+		<title>Hello</title>
+		<link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}">
+	</head>
+	<body>
+		<h1>Hallo {{ name }}!</h1>
+	    <a href="{{ url_for('auswertungen')}}">Auswertungen</a>
+	    <a href="{{ url_for('erfassen.html')}}">Erfassen</a>
+<form class="search-box" id="homesearchform">
+    <input id="homesearchformsearcher" placeholder="Name oder ID des Lebensmittels" type="text">
+    <button class="search-button">
+        <i class="fa fa-search"></i>
+    </button>
+</form>
+
+	</body>
+</html>

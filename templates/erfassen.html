@@ -1,0 +1,1219 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.83.1">
+    <title>Carousel Template · Bootstrap v5.0</title>
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/carousel/">
+
+
+
+
+    <!-- Bootstrap core CSS -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- Favicons -->
+<link rel="apple-touch-icon" href="/docs/5.0/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
+<link rel="icon" href="/docs/5.0/assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
+<link rel="icon" href="/docs/5.0/assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
+<link rel="manifest" href="/docs/5.0/assets/img/favicons/manifest.json">
+<link rel="mask-icon" href="/docs/5.0/assets/img/favicons/safari-pinned-tab.svg" color="#7952b3">
+<link rel="icon" href="/docs/5.0/assets/img/favicons/favicon.ico">
+<meta name="theme-color" content="#7952b3">
+
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+    </style>
+
+
+    <!-- Custom styles for this template -->
+    <link href="carousel.css" rel="stylesheet">
+  </head>
+  <body>
+
+<header>
+  <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+    <div class="container-fluid">
+       <a class="navbar-brand" href="#">
+    <img src="logo.png" width="30" height="30" alt="">
+  </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="navbar-nav me-auto mb-2 mb-md-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="/">Start</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Erfassen</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Auswertungen</a>
+          </li>
+        </ul>
+
+      </div>
+    </div>
+  </nav>
+</header>
+
+<main>
+  <div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-light">
+    <div class="col-md-5 p-lg-5 mx-auto my-5">
+      <h1 class="display-4 fw-normal">ERFASSEN</h1>
+      <p class="lead fw-normal">Erfasse hier deine gegessenen Lebensmittel. Danach kannst du deine Ergebnisse bei den Auswertungen sehen.</p>
+      <a class="btn btn-outline-secondary" href="/auswertungen">Zu den Auswertungen</a>
+    </div>
+    <div class="product-device shadow-sm d-none d-md-block"></div>
+    <div class="product-device product-device-2 shadow-sm d-none d-md-block"></div>
+  </div>
+
+
+
+
+  <!-- Marketing messaging and featurettes
+  ================================================== -->
+  <!-- Wrap the rest of the page in another container to center all the content. -->
+
+  <div class="container marketing">
+
+
+
+
+    <!-- START THE FEATURETTES -->
+
+    <hr class="featurette-divider">
+      <h2>Erfasse hier deine Lebensmittel und starte ein gesünderes Leben.</h2>
+      <form method="post">
+      <div class="form-group">
+    <label for="exampleFormControlSelect1">Was hast du gegessen?</label>
+    <select class="form-control" id="exampleFormControlSelect1" name="lebensmittel">
+      <option>Agar Agar</option>
+<option>Agavensirup</option>
+<option>Ahornsirup</option>
+<option>Alge, Nori, getrocknet</option>
+<option>Älplermagronen, zubereitet</option>
+<option>Amaranth, Samen, gekocht (ohne Zugabe von Fett und Salz)</option>
+<option>Amaranth, Samen, roh</option>
+<option>Amaretti (Mandelgebäck)</option>
+<option>Ananas, gezuckert (Konserve)</option>
+<option>Ananas, roh</option>
+<option>Ananas, ungezuckert (Konserve)</option>
+<option>Apfel, gedünstet, abgetropft (ohne Zugabe von Zucker)</option>
+<option>Apfel, geschält, getrocknet</option>
+<option>Apfel, roh</option>
+<option>Apfelkuchen, hausgemacht, gebacken (mit Blätterteig)</option>
+<option>Apfelkuchen, hausgemacht, gebacken (mit Kuchenteig)</option>
+<option>Apfelmus, gezuckert (Konserve)</option>
+<option>Apfelmus, ungezuckert (Konserve)</option>
+<option>Apfelsaft</option>
+<option>Apfelwein, 4 vol%</option>
+<option>Apfelwein, 6.2 vol%</option>
+<option>Appenzeller, viertelfett</option>
+<option>Appenzeller, vollfett</option>
+<option>Aprikose, gedünstet, abgetropft (ohne Zugabe von Zucker)</option>
+<option>Aprikose, getrocknet</option>
+<option>Aprikose, gezuckert (Konserve)</option>
+<option>Aprikose, roh</option>
+<option>Aprikose, ungezuckert (Konserve)</option>
+<option>Aprikosenkuchen, hausgemacht, gebacken (mit Blätterteig)</option>
+<option>Aprikosenkuchen, hausgemacht, gebacken (mit Kuchenteig)</option>
+<option>Artischocken, Herz, abgetropft (Konserve)</option>
+<option>Aubergine, gedämpft (ohne Zugabe von Salz)</option>
+<option>Aubergine, gedünstet (ohne Zugabe von Fett und Salz)</option>
+<option>Aubergine, roh</option>
+<option>Auberginen-Piccata, zubereitet</option>
+<option>Auberginenscheiben, paniert, zubereitet</option>
+<option>Aufschnitt (Durchschnitt)</option>
+<option>Avocado, roh</option>
+<option>Bäckerhefe, gepresst</option>
+<option>Balsamicoessig</option>
+<option>Bami Goreng, zubereitet</option>
+<option>Banane, gedörrt</option>
+<option>Banane, getrocknet</option>
+<option>Banane, roh</option>
+<option>Basilikum, roh</option>
+<option>Basler Leckerli</option>
+<option>Bauernbrot</option>
+<option>Bauernsalami</option>
+<option>Bauernschüblig</option>
+<option>Baumnuss</option>
+<option>Baumnussbrot</option>
+<option>Baumnussöl</option>
+<option>Béchamelsauce, hausgemacht</option>
+<option>Beeren (Durchschnitt), gekocht (ohne Zugabe von Zucker)</option>
+<option>Beeren (Durchschnitt), roh</option>
+<option>Berliner</option>
+<option>Berner Alpkäse</option>
+<option>Berner Hobelkäse</option>
+<option>Berner Zungenwurst</option>
+<option>Biber</option>
+<option>Bier Panache (Durchschnitt)</option>
+<option>Bier, alkoholfrei</option>
+<option>Bier, Lager</option>
+<option>Bierhefe, getrocknet</option>
+<option>Bierwurst</option>
+<option>Birchermüesli, zubereitet (ungezuckert)</option>
+<option>Birne, gedünstet, abgetropft (ohne Zugabe von Zucker)</option>
+<option>Birne, getrocknet</option>
+<option>Birne, gezuckert (Konserve)</option>
+<option>Birne, roh</option>
+<option>Birne, ungezuckert (Konserve)</option>
+<option>Birnenkuchen, hausgemacht, gebacken (mit Blätterteig)</option>
+<option>Birnenkuchen, hausgemacht, gebacken (mit Kuchenteig)</option>
+<option>Birnensaft</option>
+<option>Birnenweggen</option>
+<option>Blanc battu mit Früchten, mit Süsstoffen</option>
+<option>Blanc battu, nature, mager</option>
+<option>Blätterteig (mit pflanzichem Fett), ungebacken</option>
+<option>Blätterteig, hausgemacht (Butter), ungebacken</option>
+<option>Blätterteig, hausgemacht (mit pflanzlichem Fett), ungebacken</option>
+<option>Blätterteigstängel</option>
+<option>Blattgemüse (Durchschnitt exkl. Salate), gedämpft (ohne Zugabe von Salz)</option>
+<option>Blattgemüse (Durchschnitt exkl. Salate), gedünstet (ohne Zugabe von Salz und Fett)</option>
+<option>Blattgemüse (Durchschnitt exkl. Salate), gekocht (ohne Zugabe von Salz und Fett)</option>
+<option>Blattsalat (Durchschnitt), roh </option>
+<option>Blauschimmelkäse (Durchschnitt)</option>
+<option>Blumenkohl, gedämpft (ohne Zugabe von Salz)</option>
+<option>Blumenkohl, roh</option>
+<option>Blutwurst</option>
+<option>Bohne (alle Arten), gekocht (ohne Zugabe von Fett und Salz)</option>
+<option>Bohne (alle Arten), getrocknet</option>
+<option>Bohne, grün, gedämpft (ohne Zugabe von Salz)</option>
+<option>Bohne, grün, getrocknet</option>
+<option>Bohne, grün, roh</option>
+<option>Bolognaisesauce</option>
+<option>Bouillon, Fleisch, zubereitet</option>
+<option>Bouillon, Geflügel, zubereitet</option>
+<option>Bouillon, Gemüse, zubereitet</option>
+<option>Branchli (Milchschokolade mit Haselnusscrèmefüllung)</option>
+<option>Branntwein aus Getreide, 40 vol% (z.B. Whisky)</option>
+<option>Branntwein aus Wein (z.B.Cognac, Brandy)</option>
+<option>Branntwein aus Zuckerrohr (z.B. Rum)</option>
+<option>Bratbutter</option>
+<option>Bratensauce, gebunden</option>
+<option>Bratensauce, klar</option>
+<option>Bresaola</option>
+<option>Brie, Rahm</option>
+<option>Brie, vollfett</option>
+<option>Broccoli, gedämpft (ohne Zugabe von Salz)</option>
+<option>Broccoli, roh</option>
+<option>Brombeere, roh</option>
+<option>Brombeerkuchen, hausgemacht (mit süssem Mürbeteig)</option>
+<option>Brombeerkuchen, hausgemacht, gebacken (mit Blätterteig)</option>
+<option>Brombeerkuchen, hausgemacht, gebacken (mit Kuchenteig)</option>
+<option>Brot (Durchschnitt)</option>
+<option>Brühwürste geräuchert (Durchschnitt)</option>
+<option>Brühwürste ungeräuchert (Durchschnitt)</option>
+<option>Brunnenkresse, roh</option>
+<option>Brunsli</option>
+<option>Buchweizen, Korn geschält</option>
+<option>Buchweizenmehl</option>
+<option>Bündner Gerstensuppe</option>
+<option>Burger mit Fisch</option>
+<option>Burger mit Poulet</option>
+<option>Bürli (halbweiss)</option>
+<option>Buttergipfeli, hell</option>
+<option>Buttergipfeli, Vollkorn</option>
+<option>Buttermilch</option>
+<option>Butterweggli</option>
+<option>Butterzopf</option>
+<option>Butterzopf, Vollkorn</option>
+<option>Café crème, ungezuckert</option>
+<option>Cake Financier</option>
+<option>Calimocho (Rotwein mit Cola)</option>
+<option>Camembert, halbfett</option>
+<option>Camembert, Rahm</option>
+<option>Camembert, vollfett</option>
+<option>Cannelloni mit Fleischfüllung, zubereitet</option>
+<option>Cannelloni mit Spinat-Ricotta-Füllung, zubereitet</option>
+<option>Cappuccino (ohne Schokoladenpulver), ungezuckert</option>
+<option>Capuns, zubereitet</option>
+<option>Cashewnuss</option>
+<option>Cervelat</option>
+<option>Champignon (Konserve)</option>
+<option>Champignon, gedünstet (ohne Zugabe von Fett und Salz)</option>
+<option>Champignon, roh</option>
+<option>Cheeseburger</option>
+<option>Chia-Samen</option>
+<option>Chicorée, gedämpft (ohne Zugabe von Salz)</option>
+<option>Chicorée, roh</option>
+<option>Chili con carne, zubereitet</option>
+<option>Chinakohl, gedünstet (ohne Zugabe von Fett und Salz)</option>
+<option>Chinakohl, roh</option>
+<option>Chräbeli (Anisgebäck)</option>
+<option>Cicorino rot, roh</option>
+<option>Cocktailsauce, mit Rapsöl-Mayonnaise, hausgemacht</option>
+<option>Colagetränk, gezuckert</option>
+<option>Colagetränk, mit Süssstoffen</option>
+<option>Coleslaw Salat, zubereitet</option>
+<option>Coppa</option>
+<option>Cordon Bleu aus Kalbsplätzli, gebraten</option>
+<option>Cordon Bleu aus Schweinsplätzli, gebraten</option>
+<option>Cornflakes</option>
+<option>Cotechino</option>
+<option>Cotto (Fleischerzeugnis)</option>
+<option>Cracker, Salzgebäck, Apérogebäck</option>
+<option>Crèmeschnitte</option>
+<option>Crêpes mit Camembert, zubereitet</option>
+<option>Crêpes mit Champignonfüllung, zubereitet</option>
+<option>Crêpes mit Gemüsefüllung, zubereitet</option>
+<option>Crêpes mit Nutella, zubereitet</option>
+<option>Crêpes mit Schinken, zubereitet</option>
+<option>Crêpes mit Speck, zubereitet</option>
+<option>Crêpes mit Zimt und Zucker, zubereitet</option>
+<option>Crêpes nature, zubereitet</option>
+<option>Crevettencocktail, zubereitet</option>
+<option>Croque Monsieur </option>
+<option>Dattel, getrocknet</option>
+<option>Dinkelmehl, Ruch, Typ 1100</option>
+<option>Dinkelmehl, Vollkorn, Typ 1900</option>
+<option>Dinkelmehl, weiss, Typ 550</option>
+<option>Distelöl</option>
+<option>Doppelrahm, pasteurisiert</option>
+<option>Dörrbohne, eingeweicht, gedämpft (ohne Zugabe von Salz)</option>
+<option>Dorsch, Filet, gedämpft (ohne Zusatz von Fett und Salz)</option>
+<option>Dorsch, roh</option>
+<option>Dulce de Leche</option>
+<option>Edelkastanie, roh</option>
+<option>Egli, roh</option>
+<option>Eierlikör, 16.5 vol%</option>
+<option>Eieromeletten mit Käse, zubereitet</option>
+<option>Eieromeletten mit Schinken, zubereitet</option>
+<option>Eieromeletten mit Speck, zubereitet</option>
+<option>Eieromeletten, zubereitet</option>
+<option>Eierschwamm, gedünstet (ohne Zugabe von Fett und Salz)</option>
+<option>Eierschwamm, roh</option>
+<option>Eisbergsalat, roh</option>
+<option>Eistee, gezuckert</option>
+<option>Emmentaler, vollfett</option>
+<option>Endivie, roh</option>
+<option>Energy Drink, gezuckert</option>
+<option>Engadiner Nusstorte</option>
+<option>Erbse (Konserve) </option>
+<option>Erbse (Konserve), aufgewärmt (ohne Zugabe von Salz)</option>
+<option>Erbse, grün, gedämpft (ohne Zugabe von Salz)</option>
+<option>Erbse, grün, roh</option>
+<option>Erbse, reif, getrocknet</option>
+<option>Erbse, reif, getrocknet, gekocht (ohne Zusatz von Fett und Salz)</option>
+<option>Erbsen und Karotten (Konserve)</option>
+<option>Erbsen und Karotten (Konserve), aufgewärmt (ohne Zugabe von Salz)</option>
+<option>Erdbeere, roh</option>
+<option>Erdnuss</option>
+<option>Erdnuss-Flips</option>
+<option>Erdnuss, geröstet, gesalzen</option>
+<option>Erdnussbutter</option>
+<option>Erdnussöl</option>
+<option>Espresso crème, ungezuckert</option>
+<option>Essig</option>
+<option>Essig-Öl-Salatsauce, hausgemacht (mit Rapsöl)</option>
+<option>Falafel, frittiert (in HOLL Rapsöl frittiert)</option>
+<option>Fasnachtschüechli</option>
+<option>Federkohl, gedünstet (ohne Zugabe von Salz und Fett)</option>
+<option>Federkohl, roh</option>
+<option>Feige, getrocknet</option>
+<option>Feige, roh</option>
+<option>Felche, roh</option>
+<option>Fenchel, gedämpft (ohne Zugabe von Salz)</option>
+<option>Fenchel, roh</option>
+<option>Fermentierter Teig</option>
+<option>Fisch (Durchschnitt), Filet, gedämpft (ohne Zusatz von Fett und Salz)</option>
+<option>Fisch (Durchschnitt), roh </option>
+<option>Fischstäbchen (paniert und vorfritiert), gebraten in HOLL-Rapsöl</option>
+<option>Fischstäbchen (paniert und vorfritiert), im Ofen gebacken (ohne Zugabe von Fett)</option>
+<option>Fischstäbchen, paniert und vorfritiert</option>
+<option>Flammenkuchen, gebacken</option>
+<option>Flammenkuchenteig, ungebacken</option>
+<option>Fleisch (Durchschnitt exkl. Innereien), roh </option>
+<option>Fleischkäse</option>
+<option>Fleischlasagne, zubereitet</option>
+<option>Flunder, Filet, gedämpft (ohne Zusatz von Fett und Salz)</option>
+<option>Flunder, roh</option>
+<option>Fondue alkoholfrei, zubereitet</option>
+<option>Fondue klassisch, zubereitet</option>
+<option>Fondue moitié-moitié, zubereitet</option>
+<option>Forelle, ganz, gekocht (ohne Zusatz von Fett und Salz)</option>
+<option>Forelle, roh</option>
+<option>Fotzelschnitte ungezuckert</option>
+<option>Freiburger Vacherin</option>
+<option>Frischkäse, Doppelrahm</option>
+<option>Früchte (Durchschnitt), gekocht (ohne Zugabe von Zucker)</option>
+<option>Früchte (Durchschnitt), getrocknet</option>
+<option>Früchte (Durchschnitt), roh</option>
+<option>Fruchtsaft-Schorle (Durchschnitt, 60% Saft - 40% Wasser), ungezuckert</option>
+<option>Fruchtsaft (Durchschnitt), ungezuckert</option>
+<option>Fruchtsalat, gezuckert (Konserve)</option>
+<option>Fruchtsalat, ungezuckert (Konserve)</option>
+<option>Fruchtwähe/-kuchen (Durchschnitt)</option>
+<option>Fruchtwähe/-kuchen mit Blätterteig (Durchschnitt)</option>
+<option>Fruchtwähe/-kuchen mit Kuchenteig (Durchschnitt)</option>
+<option>Fruchtwähe/-kuchen mit süssem Mürbeteig (Durchschnitt)</option>
+<option>Frühlingsrolle, frittiert</option>
+<option>Fünfkornbier</option>
+<option>Garnele, gekocht</option>
+<option>Garnele, roh</option>
+<option>Geflügelfleisch (Durchschnitt exkl. Innereien), roh</option>
+<option>Geflügelfleisch mit Haut (Durchschnitt), roh</option>
+<option>Geflügelfleisch ohne Haut (Durchschnitt exkl. Innereien), roh</option>
+<option>Geflügellyoner</option>
+<option>Gehacktes (Durchschnitt aus Rind, Kalb, Schwein, Poulet), gebraten (ohne Zusatz von Fett und Salz)</option>
+<option>Gehacktes (Durchschnitt aus Rind, Kalb, Schwein, Poulet), roh</option>
+<option>Gemüse (Durchschnitt), roh</option>
+<option>Gemüsegratin, gebacken</option>
+<option>Gemüselasagne, zubereitet</option>
+<option>Gerstenflocken</option>
+<option>Gerstotto, gekocht</option>
+<option>Geschnetzeltes (Durchschnitt aus Rind, Kalb, Schwein, Geflügel), gebraten (ohne Zusatz von Fett und Salz)</option>
+<option>Geschnetzeltes (Durchschnitt aus Rind, Kalb, Schwein, Geflügel), roh</option>
+<option>Getreideflocken (Durchschnitt)</option>
+<option>Getreideriegel mit Schokoladeüberzug</option>
+<option>Getreideriegel, ohne Ueberzug und Füllung</option>
+<option>Gipfeli (Durchschnitt)</option>
+<option>Glarner Schabziger</option>
+<option>Gorgonzola</option>
+<option>Grapefruit (weiss oder rot), roh</option>
+<option>Greyerzer, vollfett</option>
+<option>Griessbrei, zubereitet (mit teilentrahmter Milch, ohne Zugabe von Zucker)</option>
+<option>Griessbrei, zubereitet (mit Vollmilch, ohne Zugabe von Zucker)</option>
+<option>Griessschnitte, zubereitet (mit teilentrahmter Milch)</option>
+<option>Griessschnitte, zubereitet (mit Vollmilch)</option>
+<option>Grittibänz</option>
+<option>Gugelhopf Grossmutter Art</option>
+<option>Gulaschsuppe</option>
+<option>Gummibonbon mit Fruchtessenz</option>
+<option>Gurke, in Essig eingelegt</option>
+<option>Gurke, roh</option>
+<option>Hackbraten, im Ofen gebacken</option>
+<option>Hackplätzli (Rind), gebraten in Rapsöl HOLL</option>
+<option>Haferbrei, zubereitet (mit teilentrahmter Milch, ohne Zugabe von Zucker)</option>
+<option>Haferbrei, zubereitet (mit Vollmilch, ohne Zugabe von Zucker)</option>
+<option>Haferflocken</option>
+<option>Haferkleie</option>
+<option>Halbentrahmte Milch 1.5% Fett, UHT</option>
+<option>Halbfettbutter</option>
+<option>Halbrahm, pasteurisiert</option>
+<option>Halbrahm, UHT</option>
+<option>Halbweissbrot</option>
+<option>Halbweissbrot (mit jodiertem Kochsalz)</option>
+<option>Hamburger, doppelt</option>
+<option>Hanföl</option>
+<option>Hart- und Halbhartkäse, vollfett (Durchschnitt)</option>
+<option>Hartkaramellen, Hartbonbons</option>
+<option>Hartweizengriess, trocken</option>
+<option>Hase (Durchschnitt), roh</option>
+<option>Haselnuss</option>
+<option>Haselnuss-Schokolade-Brotaufstrich</option>
+<option>Haselnusskekse</option>
+<option>Haselnussmakrone</option>
+<option>Haselnussstängeli</option>
+<option>Hecht, roh</option>
+<option>Hefeteig (mit Butter), süss, ungebacken</option>
+<option>Hefeteig (mit pflanzlichem Fett), süss, ungebacken</option>
+<option>Heidelbeere, roh</option>
+<option>Heilbutt, roh</option>
+<option>Himbeere, roh</option>
+<option>Hinterschinken</option>
+<option>Hirsch (Durchschnitt), roh</option>
+<option>Hirsch, Entrecôte, roh</option>
+<option>Hirse, Korn geschält</option>
+<option>Hirseflocken, Vollkorn</option>
+<option>Hirsotto, gekocht</option>
+<option>Hollandaisesauce</option>
+<option>Holunderbeere, schwarz, roh</option>
+<option>Honig (Blütenhonig)</option>
+<option>Honigmelone, roh</option>
+<option>Hot Dog in Weissbrot mit Ketchup und Senf</option>
+<option>Hühnerei, ganz, festgekocht</option>
+<option>Hühnerei, ganz, roh</option>
+<option>Hühnereigelb, roh (Eidotter)</option>
+<option>Hühnereiweiss, roh (Eiklar)</option>
+<option>Hülsenfrüchte (Durchschnitt), gekocht (ohne Zugabe von Fett und Salz)</option>
+<option>Hülsenfrüchte (Durchschnitt), getrocknet</option>
+<option>Hummus</option>
+<option>Hüttenkäse, nature</option>
+<option>Instant-Kartoffelstock, zubereitet (mit Wasser und Butter)</option>
+<option>Jägersauce</option>
+<option>Joghurt-Salatsauce (ohne Öl)</option>
+<option>Joghurt Bifidus, nature</option>
+<option>Joghurt gezuckert (Durchschnitt)</option>
+<option>Joghurt mit Aroma, mager, mit Süssstoffen</option>
+<option>Joghurt mit Früchten, mager, mit Süssstoffen</option>
+<option>Joghurt, Erdbeer</option>
+<option>Joghurt, Haselnuss</option>
+<option>Joghurt, Mokka</option>
+<option>Joghurt, Mokka, Bio</option>
+<option>Joghurt, nature</option>
+<option>Joghurt, nature, mager</option>
+<option>Joghurt, Schokolade</option>
+<option>Joghurt, Vanille</option>
+<option>Joghurtalternative aus Soja, mit Früchten oder Aroma</option>
+<option>Joghurtalternative aus Soja, mit Früchten oder Aroma, mit Calcium angereichert</option>
+<option>Joghurtalternative aus Soja, nature</option>
+<option>Joghurtalternative aus Soja, nature, mit Calcium angereichert</option>
+<option>Johannisbeere, rot, roh</option>
+<option>Johannisbeere, schwarz, roh</option>
+<option>Johannisbeerkuchen, hausgemacht (mit süssem Mürbeteig)</option>
+<option>Johannisbeerkuchen, hausgemacht, gebacken (mit Kuchenteig)</option>
+<option>Johannisbeerkuchen, hausgmacht, gebacken (mit Blätterteig)</option>
+<option>Kaffee löslich, Pulver</option>
+<option>Kaffee, schwarz, ungezuckert</option>
+<option>Kaffeerahm</option>
+<option>Kakaobutter</option>
+<option>Kakaopulver</option>
+<option>Kaki, roh</option>
+<option>Kalb, Brust, gekocht (ohne Zugabe von Fett und Salz)</option>
+<option>Kalb, Brust, roh</option>
+<option>Kalb, Eckstück, roh</option>
+<option>Kalb, Filet, roh</option>
+<option>Kalb, Gehacktes, roh</option>
+<option>Kalb, Geschnetzeltes, gebraten (ohne Zugabe von Fett und Salz)</option>
+<option>Kalb, Geschnetzeltes, roh</option>
+<option>Kalb, Haxe, geschmort (ohne Zugabe von Fett und Salz)</option>
+<option>Kalb, Haxe, roh</option>
+<option>Kalb, Kotelett, roh</option>
+<option>Kalb, Leber, roh</option>
+<option>Kalb, Milken, roh</option>
+<option>Kalb, Niere, roh</option>
+<option>Kalb, Nierstück, Steak, gebraten (ohne Zugabe von Fett und Salz)</option>
+<option>Kalb, Nierstück, Steak, roh</option>
+<option>Kalb, Runder Mocken, roh</option>
+<option>Kalb, Schulter, Braten, im Ofen gebraten (ohne Zugabe von Fett und Salz)</option>
+<option>Kalb, Schulter, Braten, roh</option>
+<option>Kalb, Voressen, roh</option>
+<option>Kalb, Zunge, roh</option>
+<option>Kalbfleisch (Durchschnitt exkl. Innereien, Kotelett), roh</option>
+<option>Kalbsbratwurst</option>
+<option>Kalbspiccata, zubereitet</option>
+<option>Kalbsplätzli, gebraten (ohne Zugabe von Fett und Salz)</option>
+<option>Kalbsplätzli, gebraten in HOLL-Rapsöl</option>
+<option>Kalbsragout mit Sauce, zubereitet</option>
+<option>Kalmar, roh</option>
+<option>Kaninchen (Durchschnitt), gekocht (ohne Zusatz von Fett und Salz)</option>
+<option>Kaninchen (Durchschnitt), roh</option>
+<option>Kaninchen, Filet, roh</option>
+<option>Karotte, gedämpft (ohne Zugabe von Salz)</option>
+<option>Karotte, roh</option>
+<option>Karottensaft</option>
+<option>Kartoffel, geschält, gedämpft (ohne Zugabe von Salz)</option>
+<option>Kartoffel, geschält, roh</option>
+<option>Kartoffelflocken, mit Milchpulver und Salz (Instant-Kartoffelstock)</option>
+<option>Kartoffelgratin dauphinois, zubereitet</option>
+<option>Kartoffelgratin Savoyer Art, zubereitet</option>
+<option>Kartoffelsalat mit Essig-Öl-Sauce</option>
+<option>Kartoffelsalat mit Mayonnaise-Joghurt-Sauce</option>
+<option>Kartoffelstärke</option>
+<option>Kartoffelstock, zubereitet (mit Rahm und Butter)</option>
+<option>Kartoffelstock, zubereitet (mit teilentrahmter Milch und Butter)</option>
+<option>Kartoffelstock, zubereitet (mit Vollmilch und Butter)</option>
+<option>Käse in Salzlake (Kuhmilch)</option>
+<option>Käse in Salzlake (Schaf- und Ziegenmilch)</option>
+<option>Käsekuchen, gebacken (mit Blätterteig)</option>
+<option>Käsekuchen, gebacken (mit Kuchenteig)</option>
+<option>Käsereibutter</option>
+<option>Käseschnitte, zubereitet</option>
+<option>Kebab im Fladenbrot</option>
+<option>Kefe, gedämpft (ohne Zugabe von Salz)</option>
+<option>Kefe, roh</option>
+<option>Ketchup</option>
+<option>Kichererbse, gekocht (ohne Zugabe von Fett und Salz)</option>
+<option>Kichererbse, getrocknet</option>
+<option>Kirsch</option>
+<option>Kirsche, gedünstet, abgetropft (ohne Zugabe von Zucker)</option>
+<option>Kirsche, roh</option>
+<option>Kirschenkuchen, hausgemacht, gebacken (mit Blätterteig)</option>
+<option>Kirschenkuchen, hausgemacht, gebacken (mit Kuchenteig)</option>
+<option>Kiwi, roh</option>
+<option>Knäckebrot, Vollkorn</option>
+<option>Knäckebrot, Vollkorn mit Leinsamen</option>
+<option>Knäckebrot, Vollkorn mit Sesam</option>
+<option>Knoblauch, roh</option>
+<option>Knollensellerie, gedämpft (ohne Zugabe von Salz)</option>
+<option>Knollensellerie, roh</option>
+<option>Knöpflimehl</option>
+<option>Kochbutter</option>
+<option>Kochpökelware (Durchschnitt)</option>
+<option>Kochsalz mit Jod</option>
+<option>Kochsalz mit Jod und Fluor</option>
+<option>Kochsalz ohne Jod und Fluor</option>
+<option>Kochspeck</option>
+<option>Kochwürste (Durchschnitt)</option>
+<option>Kohlgemüse (Durchschnitt), gekocht (ohne Zugabe von Salz und Fett)</option>
+<option>Kohlgemüse (Durchschnitt), roh</option>
+<option>Kohlrabi, gedämpft (ohne Zugabe von Salz)</option>
+<option>Kohlrabi, roh</option>
+<option>Kokosfett</option>
+<option>Kokosmakronen</option>
+<option>Kokosnuss</option>
+<option>Kokosnuss, getrocknet (Kokosrapseln, Kokosflocken)</option>
+<option>Kokosnussmilch</option>
+<option>Kondensmilch, gezuckert</option>
+<option>Kondensmilch, ungezuckert</option>
+<option>Konfitüre</option>
+<option>Konfitüre, energievermindert, mit Süssstoffen</option>
+<option>Kopfsalat, roh</option>
+<option>Kotelett (Durchschnitt aus Kalb, Schwein, Lamm), gebraten (ohne Zusatz von Fett und Salz)</option>
+<option>Kotelett (Durchschnitt aus Kalb, Schwein, Lamm), roh</option>
+<option>Krustentiere (Durchschnitt), roh</option>
+<option>Kuchenteig (mit Butter), ungebacken</option>
+<option>Kuchenteig (mit pflanzlichem Fett), ungebacken</option>
+<option>Kuchenteig, Vollkorn (mit Butter), ungebacken</option>
+<option>Kuchenteig, Vollkorn (mit pflanzichem Fett), ungebacken</option>
+<option>Kürbis-Piccata, zubereitet</option>
+<option>Kürbis, gedämpft (ohne Zugabe von Salz)</option>
+<option>Kürbis, roh</option>
+<option>Kürbiskerne</option>
+<option>Kürbiskernöl</option>
+<option>Kürbisscheiben, paniert, zubereitet</option>
+<option>Lachs, geräuchert</option>
+<option>Lachs, Wildfang, roh</option>
+<option>Lachs, Zucht, Filet, gedämpft (ohne Zusatz von Fett und Salz)</option>
+<option>Lachs, Zucht, roh</option>
+<option>Lamm, Filet, medium" gebraten (ohne Zusatz von Fett und Salz)"</option>
+<option>Lamm, Filet, roh</option>
+<option>Lamm, Gigot, gebraten (ohne Zusatz von Fett und Salz)</option>
+<option>Lamm, Gigot, roh (Schweiz, Neuseeland)</option>
+<option>Lamm, Kotelett, roh (Schweiz)</option>
+<option>Lamm, Nierstück, roh (Australien, Neuseeland)</option>
+<option>Lamm, Racks, roh (Australien, Neuseeland)</option>
+<option>Lamm, Voressen, roh (Schweiz)</option>
+<option>Lamm/Schaf (Durchschnitt exkl. Innereien, Kotelett), roh</option>
+<option>Lammragout mit Sauce, zubereitet</option>
+<option>Landjäger</option>
+<option>Latte macchiato, ungezuckert</option>
+<option>Lattich, roh</option>
+<option>Lauch, gedünstet (ohne Zugabe von Fett und Salz)</option>
+<option>Lauch, roh</option>
+<option>Laugenbrötli (mit jodiertem Kochsalz)</option>
+<option>Laugengebäck trocken (Bretzel, Sticks)</option>
+<option>Laugengipfeli (mit jodiertem Kochsalz)</option>
+<option>Leber (Durchschnitt aus Rind, Kalb, Schwein), gebraten (ohne Zusatz von Fett und Salz)</option>
+<option>Leber (Durchschnitt aus Rind, Kalb, Schwein), roh</option>
+<option>Leberwurst</option>
+<option>Lebkuchen</option>
+<option>Lebkuchen mit Schokoladeüberzug</option>
+<option>Leinöl, kaltgepresst</option>
+<option>Leinsamen</option>
+<option>Lemon Curd</option>
+<option>Limburger (Münster)</option>
+<option>Limonade, mit Aroma, gezuckert</option>
+<option>Linse, ganz, gekocht (ohne Zugabe von Fett und Salz)</option>
+<option>Linse, ganz, getrocknet</option>
+<option>Linse, geschält, gekocht (ohne Zugabe von Fett und Salz)</option>
+<option>Linse, geschält, getrocknet</option>
+<option>Linzertorte</option>
+<option>Löffelbiscuit</option>
+<option>Luganighe</option>
+<option>Lyoner</option>
+<option>Madeleine</option>
+<option>Magermilch, UHT</option>
+<option>Magermilchpulver</option>
+<option>Mailänderli</option>
+<option>Mais-Chips (Apérogebäck)</option>
+<option>Mais, gedämpft (ohne Zugabe von Salz)</option>
+<option>Mais, roh</option>
+<option>Maisgriess, gekocht</option>
+<option>Maisgriess, trocken</option>
+<option>Maiskeimöl</option>
+<option>Maiskölbchen, in Essig eingelegt</option>
+<option>Maisstärke</option>
+<option>Malzgetränk mit Kakao, Vitamine und Mineralien angereichert, pulver</option>
+<option>Malzgetränk mit Kakao, Vitamine und Mineralien angereichert, zubereitet (mit Milch)</option>
+<option>Mandarine, roh</option>
+<option>Mandel</option>
+<option>Mandel, geröstet, gesalzen</option>
+<option>Mandel, ohne Fett geröstet, gesalzen</option>
+<option>Mango, getrocknet</option>
+<option>Mango, roh</option>
+<option>Mangold, gedämpft (ohne Zugabe von Salz)</option>
+<option>Mangold, roh</option>
+<option>Maniok, Wurzelknolle, gekocht (ohne Zugabe von Salz)</option>
+<option>Maniok, Wurzelknolle, roh</option>
+<option>Margarine</option>
+<option>Marmorkuchen</option>
+<option>Marzipan</option>
+<option>Mascarpone</option>
+<option>Mayonnaise</option>
+<option>Mayonnaise, kalorienvermindert</option>
+<option>Mayonnaise, mit Rapsöl, hausgemacht</option>
+<option>Mehl (Durchschnitt)</option>
+<option>Mehl, hell (Durchschnitt)</option>
+<option>Mehlomeletten mit Champignonfüllung, zubereitet</option>
+<option>Mehlomeletten mit Gemüsefüllung, zubereitet</option>
+<option>Mehlomeletten mit Käse, zubereitet</option>
+<option>Mehlomeletten mit Nutella, zubereitet</option>
+<option>Mehlomeletten mit Schinken, zubereitet</option>
+<option>Mehlomeletten mit Speck, zubereitet</option>
+<option>Mehlomeletten mit Zimt und Zucker, zubereitet</option>
+<option>Mehlomeletten, zubereitet</option>
+<option>Melasse, Melassesirup</option>
+<option>Meringue</option>
+<option>Miesmuschel, roh</option>
+<option>Milch (Durchschnitt)</option>
+<option>Milchkaffee dunkel, ungezuckert</option>
+<option>Milchkaffee hell, ungezuckert</option>
+<option>Milchkaffee, ungezuckert</option>
+<option>Milchreis, zubereitet (mit teilentrahmter Milch, ohne Zugabe von Zucker)</option>
+<option>Milchreis, zubereitet (mit Vollmilch, ohne Zugabe von Zucker)</option>
+<option>Milchschokolade</option>
+<option>Milchschokolade mit Alkoholfüllung</option>
+<option>Milchschokolade mit Crèmefüllung (Gianduja, Nougat)</option>
+<option>Milchschokolade mit Mandel-Honig-Nougat</option>
+<option>Milchschokolade mit Nüssen</option>
+<option>Milchschokolade mit Weinbeeren, Nüssen und Mandeln</option>
+<option>Minestrone</option>
+<option>Minipic Würstchen</option>
+<option>Mirabelle, gedünstet, abgetropft (ohne Zugabe von Zucker)</option>
+<option>Mirabelle, roh</option>
+<option>Molke, süss</option>
+<option>Morchel, gedünstet (ohne Zugabe von Fett und Salz)</option>
+<option>Morchel, roh</option>
+<option>Mortadella</option>
+<option>Mostbröckli</option>
+<option>Mozzarella</option>
+<option>Mürbeteig (mit Butter), süss, gebacken</option>
+<option>Mürbeteig (mit Butter), süss, ungebacken</option>
+<option>Mürbeteig (mit pflanzlichem Fett), süss, gebacken</option>
+<option>Mürbeteig (mit pflanzlichem Fett), süss, ungebacken</option>
+<option>Mütschli</option>
+<option>Nasi Goreng, zubereitet</option>
+<option>Nektarine, roh</option>
+<option>Nussgipfel aus Blätterteig</option>
+<option>Nussgipfel aus Hefeteig</option>
+<option>Nüsslisalat, roh</option>
+<option>Nussschnecke aus Hefeteig</option>
+<option>Ofen-Frites, tiefgekühlt</option>
+<option>Olive, gefüllt mit Hackfleisch, frittiert</option>
+<option>Olive, grün, in Salzlake, abgetropft</option>
+<option>Olive, schwarz</option>
+<option>Olivenöl</option>
+<option>Orange, roh</option>
+<option>Orangeat</option>
+<option>Orangennektar</option>
+<option>Orangensaft</option>
+<option>Orangensaft, angereichert mit Vitamin C</option>
+<option>Palmöl - Palmfett</option>
+<option>Pancetta</option>
+<option>Panettone</option>
+<option>Paniermehl</option>
+<option>Pantli</option>
+<option>Papaya, reif, roh</option>
+<option>Paprika (Gewürz)</option>
+<option>Paranuss</option>
+<option>Pariserbrot</option>
+<option>Parmesan</option>
+<option>Passionsfrucht, roh</option>
+<option>Pastinake, gekocht (ohne Zugabe von Salz)</option>
+<option>Pastinake, roh</option>
+<option>Pâté de campagne</option>
+<option>Peperoni, grün, gedünstet (ohne Zugabe von Fett und Salz)</option>
+<option>Peperoni, grün, roh</option>
+<option>Peperoni, rot, gedünstet (ohne Zugabe von Fett und Salz)</option>
+<option>Peperoni, rot, roh</option>
+<option>Pestosauce, grün</option>
+<option>Pestosauce, rot</option>
+<option>Petersilie, roh</option>
+<option>Petit Beurre</option>
+<option>Petit Beurre mit Schokolade</option>
+<option>Petit Beurre, Vollkorn</option>
+<option>Pfefferminze, roh</option>
+<option>Pferd, Filet, gebraten (ohne Zusatz von Fett und Salz)</option>
+<option>Pferd, Filet, roh</option>
+<option>Pferderagout mit Sauce, zubereitet</option>
+<option>Pfirsich, gezuckert (Konserve)</option>
+<option>Pfirsich, roh</option>
+<option>Pfirsich, ungezuckert (Konserve)</option>
+<option>Pflaume, gedünstet, abgetropft (ohne Zugabe von Zucker)</option>
+<option>Pflaume, getrocknet</option>
+<option>Pflaume, roh</option>
+<option>Pflaumenkuchen, hausgemacht, gebacken (mit Blätterteig)</option>
+<option>Pflaumenkuchen, hausgemacht, gebacken (mit Kuchenteig)</option>
+<option>Pilz (Durchschnitt), gedünstet (ohne Zugabe von Fett und Salz)</option>
+<option>Pilz (Durchschnitt), roh</option>
+<option>Pilzrisotto, gekocht</option>
+<option>Pilzsauce, gebunden</option>
+<option>Pilzsuppe</option>
+<option>Pinienkerne</option>
+<option>Pistazie</option>
+<option>Pizza al tonno, gebacken</option>
+<option>Pizza Calzone, gebacken</option>
+<option>Pizza Hawaii, gebacken</option>
+<option>Pizza Margherita, gebacken</option>
+<option>Pizza mit Gemüse, gebacken</option>
+<option>Pizza mit Mascarpone und Rucola, gebacken</option>
+<option>Pizza Prosciutto e Funghi, gebacken</option>
+<option>Pizza Prosciutto, gebacken</option>
+<option>Pizza Quattro Formaggi, gebacken</option>
+<option>Pizzateig (mit Olivenöl), ungebacken</option>
+<option>Plätzli (Durchschnitt aus Geflügel, Kalb, Rind, Schwein), gebraten (ohne Zusatz von Fett und Salz)</option>
+<option>Plätzli (Durchschnitt aus Rind, Kalb, Schwein, Geflügel), paniert, gebraten</option>
+<option>Plätzli (Durchschnitt aus Rind, Kalb, Schwein, Geflügel), roh </option>
+<option>Polenta nera (aus Maisgriess und Buchweizenmehl), gekocht</option>
+<option>Pommes Chips</option>
+<option>Pommes Chips fettreduziert</option>
+<option>Pommes Frites (im Ofen gebacken), ungesalzen</option>
+<option>Pommes Frites (in HO Sonnenblumenöl frittiert), ungesalzen</option>
+<option>Popcorn</option>
+<option>Portwein, 18.5 vol%</option>
+<option>Poulet, Brust, mit Haut, roh</option>
+<option>Poulet, Brust, ohne Haut, roh</option>
+<option>Poulet, Brust, Schnitzel oder Geschnetzeltes, gebraten (ohne Zusatz von Fett und Salz)</option>
+<option>Poulet, ganz, mit Haut, gebraten (ohne Zusatz von Fett und Salz)</option>
+<option>Poulet, ganz, mit Haut, roh</option>
+<option>Poulet, Schenkel, mit Haut, gebraten (ohne Zusatz von Fett und Salz)</option>
+<option>Poulet, Schenkel, mit Haut, roh</option>
+<option>Poulet, Schenkel, ohne Haut, roh</option>
+<option>Preiselbeere, roh</option>
+<option>Prussien</option>
+<option>Pudding, Caramel</option>
+<option>Pudding, Schokolade</option>
+<option>Pudding, Vanille</option>
+<option>Quark, mit Früchten, gezuckert</option>
+<option>Quark, nature, halbfett</option>
+<option>Quark, nature, mager</option>
+<option>Quark, nature, Rahm</option>
+<option>Quarkblätterteig (mit Butter), ungebacken</option>
+<option>Quarkblätterteig (mit pflanzlichem Fett), ungebacken</option>
+<option>Quiche Lorraine, gebacken (mit Blätterteig)</option>
+<option>Quiche Lorraine, gebacken (mit Kuchenteig)</option>
+<option>Quinoa, gekocht (ohne Zugabe von Salz und Fett)</option>
+<option>Quinoa, roh</option>
+<option>Quitte, gekocht, abgetropft (ohne Zugabe von Zucker)</option>
+<option>Quitte, roh</option>
+<option>Raclettekäse</option>
+<option>Radieschen, roh</option>
+<option>Rahm (Durchschnitt)</option>
+<option>Rahmglace, Frucht</option>
+<option>Rahmkaramellen</option>
+<option>Rande, gedämpft (ohne Zugabe von Salz)</option>
+<option>Rande, roh</option>
+<option>Rapsöl</option>
+<option>Rapsöl HOLL (high oleic, low linolenic)</option>
+<option>Ratatouille, zubereitet</option>
+<option>Rauchsalami</option>
+<option>Reblochon</option>
+<option>Reh (Durchschnitt), roh</option>
+<option>Reh, Ragout, roh</option>
+<option>Reh, Schnitzel, roh</option>
+<option>Reibkäse</option>
+<option>Reis parboiled, gekocht in Salzwasser (unjodiert)</option>
+<option>Reis parboiled, trocken</option>
+<option>Reis poliert, gekocht in Salzwasser (unjodiert)</option>
+<option>Reis poliert, trocken</option>
+<option>Reis unpoliert, gekocht in Salzwasser (unjodiert)</option>
+<option>Reis unpoliert, trocken</option>
+<option>Reisgetränk, nature</option>
+<option>Rettich, roh</option>
+<option>Rhabarber, roh</option>
+<option>Rhabarberkompott, gezuckert</option>
+<option>Rhabarberkuchen, gebacken (mit Blätterteig)</option>
+<option>Rhabarberkuchen, hausgemacht, gebacken (mit Kuchenteig)</option>
+<option>Rind, Brust, gekocht (ohne Zugabe von Fett und Salz)</option>
+<option>Rind, Brust, roh</option>
+<option>Rind, Eckstück, roh</option>
+<option>Rind, Entrecôte, medium" gebraten (ohne Zusatz von Fett und Salz)"</option>
+<option>Rind, Entrecôte, roh</option>
+<option>Rind, Filet, medium" gebraten (ohne Zustatz von Fett und Salz)"</option>
+<option>Rind, Filet, roh</option>
+<option>Rind, Gehacktes, gebraten (ohne Zusatz von Fett und Salz)</option>
+<option>Rind, Gehacktes, roh</option>
+<option>Rind, Geschnetzeltes, roh</option>
+<option>Rind, Hals, roh</option>
+<option>Rind, Hohrücken, roh</option>
+<option>Rind, Leber, roh</option>
+<option>Rind, Runder Mocken, roh</option>
+<option>Rind, Schulter, Braten medium", im Ofen gebraten (ohne Zugabe von Fett und Salz)"</option>
+<option>Rind, Schulter, Braten rare", im Ofen gebraten (ohne Zugabe von Fett und Salz)"</option>
+<option>Rind, Schulter, Braten well done", im Ofen gebraten (ohne Zugabe von Fett und Salz)"</option>
+<option>Rind, Schulter, Braten, roh</option>
+<option>Rind, Siedfleisch, durchzogen,  roh</option>
+<option>Rind, Siedfleisch, durchzogen, gekocht (ohne Zusatz von Fett und Salz)</option>
+<option>Rind, Siedfleisch, mager, gekocht (ohne Zusatz von Fett and Salz)</option>
+<option>Rind, Siedfleisch, mager, roh</option>
+<option>Rind, Voressen, roh</option>
+<option>Rind, Zunge, roh</option>
+<option>Rindfleisch (Durchschnitt exkl. Innereien, Rippensteak), roh</option>
+<option>Rindsragout mit Sauce, zubereitet</option>
+<option>Rippli (Nierstück), roh</option>
+<option>Risotto ohne Käse, gekocht</option>
+<option>Ristretto crème, ungezuckert</option>
+<option>Riz Casimir mit Kalbfleisch, zubereitet</option>
+<option>Riz Casimir mit Poulet, zubereitet</option>
+<option>Roggenbrot mit Sauerteig</option>
+<option>Roggenmehl, halbweiss, Typ 815</option>
+<option>Roggenmehl, Ruch, Typ 1050</option>
+<option>Roggenmehl, Vollkorn, Schrot, Typ 1800</option>
+<option>Roggenschrotbrot</option>
+<option>Rohessspeck</option>
+<option>Rohpökelwaren (Durchschnitt)</option>
+<option>Rohschinken</option>
+<option>Rohwürste mit abgebrochener Reifung (Durchschnitt)</option>
+<option>Rohwürste/Dauerwürste (Durchschnitt)</option>
+<option>Rollgerste</option>
+<option>Rollmops</option>
+<option>Rollschinken</option>
+<option>Rollschinken, gekocht (ohne Zusatz von Fett und Salz)</option>
+<option>Roquefort</option>
+<option>Rosenkohl, gedämpft (ohne Zugabe von Salz)</option>
+<option>Rosenkohl, roh</option>
+<option>Rosine, getrocknet</option>
+<option>Rosmarin, roh</option>
+<option>Rösti (Fertig-Rösti), ungebraten</option>
+<option>Rotkohl, gedünstet (ohne Zugabe von Fett und Salz)</option>
+<option>Rotkohl, roh</option>
+<option>Ruchbrot</option>
+<option>Ruchbrot (mit jodiertem Kochsalz)</option>
+<option>Rucola, roh</option>
+<option>Rüeblitorte</option>
+<option>Rührei mit Champignons, zubereitet</option>
+<option>Rührei mit Käse, zubereitet</option>
+<option>Rührei mit Kräutern, zubereitet</option>
+<option>Rührei mit Schinken, zubereitet</option>
+<option>Rührei, zubereitet</option>
+<option>Rührteigcake Gleichschwer""</option>
+<option>Russischer Salat, zubereitet</option>
+<option>Sablé, Butter</option>
+<option>Salametti</option>
+<option>Salami</option>
+<option>Salami (Billiglinie)</option>
+<option>Salatsauce französisch, hausgemacht (mit Rapsöl)</option>
+<option>Salatsauce italienisch, hausgemacht (mit Olivenöl)</option>
+<option>Salatsauce, französisch</option>
+<option>Salatsauce, italienisch</option>
+<option>Salbei, roh</option>
+<option>Salsiz</option>
+<option>Saltimbocca, gebraten in HOLL-Rapsöl</option>
+<option>Salz, Himalayasalz</option>
+<option>Salz, Meersalz, Fleur de sel</option>
+<option>Salz, Meersalz, Standard, weiss, ohne zugesetztes Jod und Fluor </option>
+<option>Samen, Kerne, Nüsse (Durchschnitt), ungesalzen</option>
+<option>Samosa, frittiert</option>
+<option>Samosa, gebacken</option>
+<option>Sandwich (Baguette) mit Aufschnitt</option>
+<option>Sandwich (Baguette) mit Fleischkäse</option>
+<option>Sandwich (Baguette) mit Halbhartkäse</option>
+<option>Sandwich (Baguette) mit Mozzarella</option>
+<option>Sandwich (Baguette) mit Rohschinken</option>
+<option>Sandwich (Baguette) mit Salami</option>
+<option>Sandwich (Baguette) mit Schinken</option>
+<option>Sandwich (Baguette) mit Trockenfleisch</option>
+<option>Sandwich (Baguette) mit Weichkäse</option>
+<option>Sandwich (Ruchbrot) mit Aufschnitt</option>
+<option>Sandwich (Ruchbrot) mit Fleischkäse</option>
+<option>Sandwich (Ruchbrot) mit Halbhartkäse</option>
+<option>Sandwich (Ruchbrot) mit Mozzarella</option>
+<option>Sandwich (Ruchbrot) mit Rohschinken</option>
+<option>Sandwich (Ruchbrot) mit Salami</option>
+<option>Sandwich (Ruchbrot) mit Schinken</option>
+<option>Sandwich (Ruchbrot) mit Trockenfleisch</option>
+<option>Sandwich (Ruchbrot) mit Weichkäse</option>
+<option>Sardelle im Öl, abgetropft</option>
+<option>Sardellenpaste</option>
+<option>Sardine im Öl, abgetropft</option>
+<option>Sardine, roh</option>
+<option>Saucisse aux choux</option>
+<option>Saucisson</option>
+<option>Saucisson vaudois</option>
+<option>Saucisson, gekocht (ohne Zusatz von Fett und Salz)</option>
+<option>Sauerkraut, in Essig eingelegt</option>
+<option>Sauerrahm</option>
+<option>Saurer Halbrahm</option>
+<option>Sbrinz</option>
+<option>Scampi (Kaisergranat), roh</option>
+<option>Schafmilch</option>
+<option>Schaumwein</option>
+<option>Schinkengipfeli</option>
+<option>Schmelzkäse, Scheibe, Rahm</option>
+<option>Schmelzkäse, Scheibe, viertelfett</option>
+<option>Schmelzkäse, Scheibe, vollfett</option>
+<option>Schmelzkäse, streichfähig, Rahm</option>
+<option>Schmelzkäse, streichfähig, viertelfett</option>
+<option>Schmelzkäse, streichfähig, vollfett</option>
+<option>Schnittlauch, roh</option>
+<option>Schnitzelbrot mit Cocktailsauce</option>
+<option>Schnitzelbrot mit Tartarsauce</option>
+<option>Schoggibrötli</option>
+<option>Schokolade, dunkel (bitter)</option>
+<option>Schokolade, weiss</option>
+<option>Schokoladencrème</option>
+<option>Schokoladengugelhopf</option>
+<option>Schokoladenpulver</option>
+<option>Scholle, roh</option>
+<option>Schümliguetzli</option>
+<option>Schümliguetzli mit Schokolade</option>
+<option>Schützenwurst</option>
+<option>Schwarzwälder Kirschtorte</option>
+<option>Schwarzwurzel, gedämpft (ohne Zugabe von Salz)</option>
+<option>Schwarzwurzel, roh</option>
+<option>Schwein, Brustspitz, roh</option>
+<option>Schwein, Eckstück, Plätzli, gebraten (ohne Zusatz von Fett und Salz)</option>
+<option>Schwein, Eckstück, roh</option>
+<option>Schwein, Filet, gebraten (ohne Zusatz von Fett und Salz)</option>
+<option>Schwein, Filet, roh</option>
+<option>Schwein, Gehacktes, roh</option>
+<option>Schwein, Geschnetzeltes, gebraten (ohne Zusatz von Fett und Salz)</option>
+<option>Schwein, Geschnetzeltes, roh</option>
+<option>Schwein, Hals, Steak, gebraten (ohne Zusatz von Fett und Salz)</option>
+<option>Schwein, Hals, Steak, roh</option>
+<option>Schwein, Haxe, geschmort (ohne zusatz von Fett und Salz)</option>
+<option>Schwein, Haxe, roh</option>
+<option>Schwein, Kotelett, gebraten (ohne Zusatz von Fett und Salz)</option>
+<option>Schwein, Kotelett, roh</option>
+<option>Schwein, Leber, roh</option>
+<option>Schwein, Nierstück, roh</option>
+<option>Schwein, Runder Mocken, roh</option>
+<option>Schwein, Schulter, Braten medium", im Ofen gebraten (ohne Zugabe von Fett und Salz)"</option>
+<option>Schwein, Schulter, Braten well done", im Ofen gebraten (ohne Zugabe von Fett und Salz)"</option>
+<option>Schwein, Schulter, Braten, roh</option>
+<option>Schwein, Voressen, roh</option>
+<option>Schweinefleisch (Durchschnitt exkl. Innereien, Kotelett, Haxe), roh</option>
+<option>Schweineschmalz</option>
+<option>Schweinsbratwurst</option>
+<option>Schweinsbratwurst, gebraten (ohne Zusatz von Fett und Salz)</option>
+<option>Schweinspiccata, zubereitet</option>
+<option>Schweinsragout mit Sauce, zubereitet</option>
+<option>Schweinswurst</option>
+<option>Schweizer Salami, Schweine- und Rindfleisch</option>
+<option>Seehecht, roh</option>
+<option>Seelachs, roh</option>
+<option>Seezunge, roh</option>
+<option>Sellerie-Piccata, zubereitet</option>
+<option>Selleriescheiben, paniert, zubereitet</option>
+<option>Semmeli</option>
+<option>Senf</option>
+<option>Sesamsamen ungeschält</option>
+<option>Sesamsamen, geschält</option>
+<option>Sherry, 18.5 vol%</option>
+<option>Siedfleischsalat, zubereitet</option>
+<option>Silberzwiebel, in Essig eingelegt</option>
+<option>Sirup unverdünnt</option>
+<option>Sirup zubereitet (verdünnt im Verhältnis 1:5.5)</option>
+<option>Sojabohne, gekocht (ohne Zugabe von Fett und Salz)</option>
+<option>Sojabohne, getrocknet</option>
+<option>Sojagetränk, nature</option>
+<option>Sojamehl, entfettet</option>
+<option>Sojamehl, vollfett</option>
+<option>Sojaöl</option>
+<option>Sojasauce</option>
+<option>Sojasprossen, roh</option>
+<option>Sonnenblumenkerne</option>
+<option>Sonnenblumenöl</option>
+<option>Sonnenblumenöl HO (high oleic), raffiniert</option>
+<option>Sorbet, Frucht</option>
+<option>Spargel, gedämpft (ohne Zugabe von Salz)</option>
+<option>Spargel, roh (weiss und grün)</option>
+<option>Spinat, gedämpft (ohne Zugabe von Salz)</option>
+<option>Spinat, roh</option>
+<option>Spinatkuchen, gebacken (mit Blätterteig)</option>
+<option>Spinatkuchen, gebacken (mit Kuchenteig)</option>
+<option>Spirituosen 40 vol% (z.B. Vodka, Gin)</option>
+<option>Spitzbube (Mürbeteiggebäck mit Konfitüre)</option>
+<option>St. Galler Bürli (halbweiss)</option>
+<option>St. Galler Schüblig</option>
+<option>St. Paulin</option>
+<option>Stachelbeere, roh</option>
+<option>Stangensellerie, gedämpft (ohne Zugabe von Salz)</option>
+<option>Stangensellerie, roh</option>
+<option>Steinpilz, gedünstet (ohne Zugabe von Fett und Salz)</option>
+<option>Steinpilz, roh</option>
+<option>Strudelteig, ungebacken</option>
+<option>Surimi</option>
+<option>Süsskartoffel, gedämpft (ohne Zugabe von Salz)</option>
+<option>Süsskartoffel, roh</option>
+<option>Taboulé, zubereitet (mit Bulgur)</option>
+<option>Taboulé, zubereitet (mit Couscous)</option>
+<option>Tartarsauce, mit Rapsöl-Mayonnaise, hausgemacht</option>
+<option>Tee, ungezuckert</option>
+<option>Teigwaren mit Ei, gekocht im Salzwasser (unjodiert)</option>
+<option>Teigwaren mit Ei, trocken</option>
+<option>Teigwaren ohne Ei, gekocht im Salzwasser (unjodiert)</option>
+<option>Teigwaren ohne Ei, trocken</option>
+<option>Teigwaren ohne Ei, Vollkorn, gekocht im Salzwasser (unjodiert)</option>
+<option>Teigwaren ohne Ei, Vollkorn, trocken</option>
+<option>Teigwaren, frisch, gefüllt mit Fleisch, gekocht (ohne Zugabe von Fett und Salz)</option>
+<option>Teigwaren, frisch, gefüllt mit Spinat und Ricotta, gekocht (ohne Zugabe von Fett und Salz)</option>
+<option>Teigwaren, frisch, gefüllt mit Spinat und Ricotta, roh</option>
+<option>Teigwarenauflauf mit Schinken, zubereitet</option>
+<option>Teigwarensalat mit französischer Sauce</option>
+<option>Teigwarensalat mit italienischer Sauce</option>
+<option>Teilentrahmte Milch, pasteurisiert</option>
+<option>Teilentrahmte Milch, UHT</option>
+<option>Tessinerbrot</option>
+<option>Tête de Moine</option>
+<option>Thon im Öl, abgetropft</option>
+<option>Thon im Wasser, abgetropft</option>
+<option>Thonsalat an Essig-Öl-Sauce (aus Thon im Wasser)</option>
+<option>Thunfisch, roh</option>
+<option>Thymian, roh</option>
+<option>Tilsiter, pasteurisiert, vollfett</option>
+<option>Tilsiter, Rohmilch, vollfett</option>
+<option>Tirolercake</option>
+<option>Toastbrot mit Butter</option>
+<option>Toastbrot mit Pflanzenölen</option>
+<option>Tofu, fest, nature</option>
+<option>Tofu, geräuchert</option>
+<option>Tofu, seidig (weich), nature</option>
+<option>Tomate, gedünstet (ohne Zugabe von Fett und Salz)</option>
+<option>Tomate, geschält (Konserve)</option>
+<option>Tomate, getrocknet</option>
+<option>Tomate, roh</option>
+<option>Tomatenkuchen, gebacken (mit Blätterteig)</option>
+<option>Tomatenkuchen, gebacken (mit Kuchenteig)</option>
+<option>Tomatenpüree</option>
+<option>Tomatensaft</option>
+<option>Tomatensauce</option>
+<option>Tomatensuppe</option>
+<option>Tomme</option>
+<option>Topinambur, gekocht (ohne Zugabe von Salz)</option>
+<option>Topinambur, roh</option>
+<option>Traube, roh</option>
+<option>Traubenkernöl</option>
+<option>Traubensaft</option>
+<option>Traubenzucker</option>
+<option>Trinkwasser (Mittelwert Schweiz)</option>
+<option>Trockenfleisch</option>
+<option>Truthahn, Brust, Schnitzel oder Geschnetzeltes, grebraten (ohne Zusatz von Fett und Salz)</option>
+<option>Truthahn, Brust, Schnitzel oder Geschnetzeltes, roh</option>
+<option>Vacherin Mont d'Or</option>
+<option>Vanillecrème, hausgemacht, gekocht</option>
+<option>Vinaigrette (mit Rapsöl)</option>
+<option>Vitello tonnato mit Garnitur</option>
+<option>Vitello tonnato ohne Garnitur</option>
+<option>Vollkornreiswaffel</option>
+<option>Vollmilch, pasteurisiert</option>
+<option>Vollmilch, UHT</option>
+<option>Vollmilchpulver</option>
+<option>Vollrahm, pasteurisiert</option>
+<option>Vollrahm, UHT</option>
+<option>Vorderschinken</option>
+<option>Vorzugsbutter</option>
+<option>Walliser Roggenbrot</option>
+<option>Wasabi Paste</option>
+<option>Wassereis</option>
+<option>Wassermelone, roh</option>
+<option>Weichkaramellen, Bonbons</option>
+<option>Weichkäse (Durchschnitt ohne fettreduzierte Varianten)</option>
+<option>Weichkäse, Doppelrahm</option>
+<option>Weichkäse, Rahm</option>
+<option>Weichkäse, vollfett</option>
+<option>Wein rot, 12 vol%</option>
+<option>Wein rot, 13.5 vol%</option>
+<option>Wein rot, 9 vol%</option>
+<option>Wein weiss, 11 vol%</option>
+<option>Wein weiss, 12.5 vol%</option>
+<option>Wein weiss, gespritzt, sauer</option>
+<option>Wein weiss, gespritzt, süss</option>
+<option>Weissbrot</option>
+<option>Weisskohl, gedämpft (ohne Zugabe von Salz)</option>
+<option>Weisskohl, gedünstet (ohne Zugabe von Fett und Salz)</option>
+<option>Weisskohl, roh</option>
+<option>Weisswurst</option>
+<option>Weizen (Weichweizen), ganzes Korn</option>
+<option>Weizenflocken, Vollkorn</option>
+<option>Weizenkeime</option>
+<option>Weizenkeimöl</option>
+<option>Weizenkleie</option>
+<option>Weizenmehl (Backmehl), Typ 550</option>
+<option>Weizenmehl, halbweiss, Typ 720</option>
+<option>Weizenmehl, Ruch, Typ 1100</option>
+<option>Weizenmehl, Vollkorn, Typ 1700</option>
+<option>Weizenmehl, weiss, Typ 400</option>
+<option>Weizenotto, gekocht</option>
+<option>Weizenstärke</option>
+<option>Weizenvollkornbrot</option>
+<option>Wermut, 15 vol%</option>
+<option>Wienerli</option>
+<option>Wienerli, gekocht</option>
+<option>Wildfleisch (Durchschnitt), gekocht (ohne Zusatz von Fett und Salz)</option>
+<option>Wildfleisch (Durchschnitt), roh</option>
+<option>Wildfleischterrine</option>
+<option>Wildschwein (Durchschnitt), roh</option>
+<option>Wirz, gedämpft (ohne Zugabe von Salz)</option>
+<option>Wirz, roh</option>
+<option>Wurst-Käse-Salat, zubereitet</option>
+<option>Wurstsalat, zubereitet</option>
+<option>Wurzel- und Knollengemüse (Durchschnitt), gedämpft (ohne Zugabe von Salz)</option>
+<option>Wurzel- und Knollengemüse (Durchschnitt), gedünstet (ohne Zugabe von Fett und Salz)</option>
+<option>Wurzel- und Knollengemüse (Durchschnitt), gekocht (ohne Zugabe von Fett und Salz)</option>
+<option>Wurzel- und Knollengemüse (Durchschnitt), roh</option>
+<option>Zampone</option>
+<option>Ziege (Durchschnitt), roh</option>
+<option>Ziegenmilch</option>
+<option>Ziger weiss</option>
+<option>Zimt</option>
+<option>Zimtstern</option>
+<option>Zitronat</option>
+<option>Zitrone, roh</option>
+<option>Zitronensaft</option>
+<option>Zitrusfrüchte (Durchschnitt), roh</option>
+<option>Zucchetti-Piccata, zubereitet</option>
+<option>Zucchetti, gedämpft (ohne Zugabe von Salz)</option>
+<option>Zucchetti, gedünstet (ohne Zugabe von Fett und Salz)</option>
+<option>Zucchetti, roh</option>
+<option>Zucchettischeiben, paniert, zubereitet</option>
+<option>Zucker, braun</option>
+<option>Zucker, weiss</option>
+<option>Zuckerhutsalat, roh</option>
+<option>Zuckermais (Konserve)</option>
+<option>Zuckermais (Konserve), aufgewärmt (ohne Zugabe von Salz)</option>
+<option>Zuger Kirschtorte</option>
+<option>Zunge (Durchschnitt aus Kalb und Rind), roh</option>
+<option>Zwetschge, gedünstet, abgetropft (ohne Zugabe von Zucker)</option>
+<option>Zwetschge, roh</option>
+<option>Zwetschgenkuchen, hausgemacht, gebacken (mit Blätterteig)</option>
+<option>Zwetschgenkuchen, hausgemacht, gebacken (mit Kuchenteig)</option>
+<option>Zwieback</option>
+<option>Zwieback, Vollkorn</option>
+<option>Zwiebel, gedünstet (ohne Zugabe von Fett und Salz)</option>
+<option>Zwiebel, geröstet (ohne Zugabe von Fett und Salz)</option>
+<option>Zwiebel, roh</option>
+<option>Zwiebelkuchen, gebacken (mit Blätterteig)</option>
+<option>Zwiebelkuchen, gebacken (mit Kuchenteig)</option>
+
+    </select>
+          <label for="exampleFormControlSelect1">Welche Menge in Gramm/Milliliter hast du gegessen?</label>
+    <select class="form-control" id="exampleFormControlSelect1" name="menge">
+        <option>100</option>
+        <option>200</option>
+        <option>300</option>
+        <option>400</option>
+        <option>500</option>
+        </select>
+          <p></p>
+          <button type="submit" class="btn btn-primary">Absenden</button>
+          </form>
+
+
+  </div>
+
+
+
+
+  <!-- FOOTER -->
+  <footer class="container">
+    <p class="float-end"><a href="#">Back to top</a></p>
+    <p>&copy; 2021 Healthoo &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
+  </footer>
+</main>
+
+
+    <script src="/docs/5.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8" crossorigin="anonymous"></script>
+
+
+  </body>
+</html>
