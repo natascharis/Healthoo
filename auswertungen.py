@@ -183,8 +183,8 @@ def auswerten_retinol(json):
         if key > str(woche):
             print(retinoldict[str(value[0])])
             retinol+=((int(retinoldict[str(value[0])]))/100* int(value[1]))
-    liste=[retinol,bedarf-retinol]
-    return liste
+    deckung = (retinol / bedarf) * 100
+    return deckung
 
 def auswerten_vitc(json):
     woche = aktuellesDatum - datetime.timedelta(days=7)
@@ -196,8 +196,8 @@ def auswerten_vitc(json):
         if key > str(woche):
             print(vitamincdict[str(value[0])])
             vitc +=((int(vitamincdict[str(value[0])]))/100* int(value[1]))
-    liste=[vitc,bedarf-vitc]
-    return liste
+    deckung = (vitc / bedarf) * 100
+    return deckung
 
 def auswerten_vitb1(json):
     woche = aktuellesDatum - datetime.timedelta(days=7)
@@ -209,8 +209,8 @@ def auswerten_vitb1(json):
         if key > str(woche):
             print(vitaminb1dict[str(value[0])])
             vitb1 +=((int(vitaminb1dict[str(value[0])]))/100* int(value[1]))
-    liste=[ vitb1,bedarf- vitb1]
-    return liste
+    deckung = (vitb1 / bedarf) * 100
+    return deckung
 
 def auswerten_kalium(json):
     woche = aktuellesDatum - datetime.timedelta(days=7)
@@ -222,8 +222,8 @@ def auswerten_kalium(json):
         if key > str(woche):
             print(kaliumdict[str(value[0])])
             kalium +=((int(kaliumdict[str(value[0])]))/100* int(value[1]))
-    liste=[ kalium,bedarf- kalium]
-    return liste
+    deckung = (kalium / bedarf) * 100
+    return deckung
 
 def wochentag_definieren():
     tag = datetime.datetime.today().weekday()

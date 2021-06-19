@@ -45,6 +45,20 @@ def data2():
     df2 = pd.DataFrame(magnesium, columns=["Wert"])
     return df2
 
+retinol=auswertungen.auswerten_retinol(mein_eingelesenes_dict)
+vitc=auswertungen.auswerten_vitc(mein_eingelesenes_dict)
+vitb1=auswertungen.auswerten_vitb1(mein_eingelesenes_dict)
+kalium=auswertungen.auswerten_kalium(mein_eingelesenes_dict)
+
+vitamine= ["Retinol","Vitamin C","Vitamin B1", "Kalium"]
+deckung=[retinol,vitc,vitb1,kalium]
+
+
+def data3():
+
+    df3 = pd.DataFrame(zip(vitamine,deckung))
+    return df3
+
 def viz():
     df = data()
 
@@ -69,11 +83,20 @@ def viz2():
     div2 = plot(fig, output_type="div")
     return div2
 
+def viz3():
+    df3 = data3()
+    fig = px.histogram(df3, x=vitamine, y=deckung, range_y=[0, 100],
+                       title="Übersicht Deckung mit verschiedenen Vitaminen",
+                       labels={"y": "Deckung in Prozent", "x": "Vitamine"})
+    div3 = plot(fig, output_type="div")
+    return div3
+
 @app.route('/auswertungen')
 def auswertungen():
     div = viz()
     div2=viz2()
-    return render_template('auswertungen.html',viz_div=div,viz_div2=div2)
+    div3=viz3()
+    return render_template('auswertungen.html',viz_div=div,viz_div2=div2,viz_div3=div3)
 
 if __name__ == "__main__":
     app.run(debug=True, port=5000)
