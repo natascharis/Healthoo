@@ -1,16 +1,12 @@
 import datetime
 import pandas as pd
-from json import loads, dumps
+from json import loads
 
+#Schweizer Nährwertdatenbank wird eingelesen
 df = pd.read_excel('Schweizer_Nahrwertdatenbank.xlsx', engine='openpyxl')
 
-dict = {}
-# Liest die Zeilen des Excel Files aus, mit 0 wird erste Spalte angesprochen
-
-i=1
 # In Keys werden die Schlüssel abgespeichert
 keys= []
-inhalt=[]
 #Listen für Einträge erstellen
 energie=[]
 fett=[]
@@ -25,7 +21,7 @@ vitaminb1=[]
 vitaminb2=[]
 vitaminb6=[]
 vitaminb12=[]
-niacin  =[]
+niacin=[]
 vitaminc=[]
 vitamind=[]
 kalium=[]
@@ -35,7 +31,7 @@ magnesium=[]
 for row in df.itertuples(index=False):
     #Liste wird durch Namen ergänzt die sich in erster Spalte befinden
     keys.append(row[0])
-    #Die Spalte für die Energie wird in Liste hinzugefügt kcal
+    #Die Spalte für die Energie wird in Liste hinzugefügt, analog bei weiteren Vitaminen
     energie.append(row[8])
     fett.append(row[11])
     cholesterin.append(row[23])
@@ -98,19 +94,13 @@ vitaminddict = {keys[i]: vitamind[i] for i in range(len(keys))}
 kaliumdict = {keys[i]: kalium[i] for i in range(len(keys))}
 natriumdict = {keys[i]: natrium[i] for i in range(len(keys))}
 magnesiumdict = {keys[i]: magnesium[i] for i in range(len(keys))}
-print(energiedict)
-print(magnesiumdict["Ahornsirup"])
 
 
 
 
-aktuellesDatum = datetime.datetime.now()
-
-print(aktuellesDatum)
-
-dict1= {"2021-06-15 15:55:48.398747": ["Sandwich (Ruchbrot) mit Mozzarella", "100"],"2021-06-12 15:55:30.483957": ["Chinakohl, roh", "200"], "2021-06-12 15:55:30.483958": ["Chinakohl, roh", "100"],"2021-05-30 15:55:30.483957": ["Chinakohl, roh", "100"], "2021-05-30 15:55:48.398747": ["Sandwich (Ruchbrot) mit Mozzarella", "100g"]}
-
+#In dieser Funktion werden die kcal für die letzte Woche berechnet
 def auswerten_letzteWoche (json):
+    aktuellesDatum = datetime.datetime.now()
     woche = aktuellesDatum - datetime.timedelta(days=7)
     kcal = 0
     kcal_heute=0
@@ -120,16 +110,12 @@ def auswerten_letzteWoche (json):
     kcal_vorvorvorgestern=0
     kcal_vorvorvorvorgestern=0
     kcal_vorvorvorvorvorgestern=0
-    tag1=""
     #Es wird auf den kcal Wert aus dem Energiedict zugegriffen und multipliziert mit der konsumierten Menge
     for key, value in json.items():
         #Es werden nur Werte die in der letzten Woche hinzugefügt wurden berücksichtigt
         if key > str(woche):
-            print(energiedict[str(value[0])])
             kcal+=((int(energiedict[str(value[0])]))/100* int(value[1]))
-            print("Du hast insgesamt "+str(kcal)+" kcal zu dir genommen")
             datetime.datetime.strptime(key,'%Y-%m-%d %H:%M:%S.%f')
-            print(key)
             date2=datetime.datetime.strptime(key,'%Y-%m-%d %H:%M:%S.%f')
             diff=aktuellesDatum-date2
             # Sekunden werden in Tage umgewandelt
@@ -161,6 +147,7 @@ def auswerten_letzteWoche (json):
     return kcal_woche
 
 def auswerten_magnesium_woche(json):
+    aktuellesDatum = datetime.datetime.now()
     woche = aktuellesDatum - datetime.timedelta(days=7)
     magnesium=0
     bedarf=2100
@@ -168,12 +155,13 @@ def auswerten_magnesium_woche(json):
     for key, value in json.items():
         #Es werden nur Werte die in der letzten Woche hinzugefügt wurden berücksichtigt
         if key > str(woche):
-            print(magnesiumdict[str(value[0])])
             magnesium+=((int(magnesiumdict[str(value[0])]))/100* int(value[1]))
+    #Für das Tortendiagramm wird für die Deckung die Differenz zwischen Wochenbedarf und aufgenommenem Magnesium benötigt
     liste=[magnesium,bedarf-magnesium]
     return liste
 
 def auswerten_retinol(json):
+    aktuellesDatum = datetime.datetime.now()
     woche = aktuellesDatum - datetime.timedelta(days=7)
     retinol=0
     bedarf=7000
@@ -181,12 +169,13 @@ def auswerten_retinol(json):
     for key, value in json.items():
         #Es werden nur Werte die in der letzten Woche hinzugefügt wurden berücksichtigt
         if key > str(woche):
-            print(retinoldict[str(value[0])])
             retinol+=((int(retinoldict[str(value[0])]))/100* int(value[1]))
+    #Es wird der Prozentsatz der Deckung berechnet
     deckung = (retinol / bedarf) * 100
     return deckung
 
 def auswerten_vitc(json):
+    aktuellesDatum = datetime.datetime.now()
     woche = aktuellesDatum - datetime.timedelta(days=7)
     vitc=0
     bedarf=665
@@ -194,12 +183,12 @@ def auswerten_vitc(json):
     for key, value in json.items():
         #Es werden nur Werte die in der letzten Woche hinzugefügt wurden berücksichtigt
         if key > str(woche):
-            print(vitamincdict[str(value[0])])
             vitc +=((int(vitamincdict[str(value[0])]))/100* int(value[1]))
     deckung = (vitc / bedarf) * 100
     return deckung
 
 def auswerten_vitb1(json):
+    aktuellesDatum = datetime.datetime.now()
     woche = aktuellesDatum - datetime.timedelta(days=7)
     vitb1=0
     bedarf=7
@@ -207,12 +196,12 @@ def auswerten_vitb1(json):
     for key, value in json.items():
         #Es werden nur Werte die in der letzten Woche hinzugefügt wurden berücksichtigt
         if key > str(woche):
-            print(vitaminb1dict[str(value[0])])
             vitb1 +=((int(vitaminb1dict[str(value[0])]))/100* int(value[1]))
     deckung = (vitb1 / bedarf) * 100
     return deckung
 
 def auswerten_kalium(json):
+    aktuellesDatum = datetime.datetime.now()
     woche = aktuellesDatum - datetime.timedelta(days=7)
     kalium=0
     bedarf=28000
@@ -220,12 +209,12 @@ def auswerten_kalium(json):
     for key, value in json.items():
         #Es werden nur Werte die in der letzten Woche hinzugefügt wurden berücksichtigt
         if key > str(woche):
-            print(kaliumdict[str(value[0])])
             kalium +=((int(kaliumdict[str(value[0])]))/100* int(value[1]))
     deckung = (kalium / bedarf) * 100
     return deckung
 
 def wochentag_definieren():
+    aktuellesDatum = datetime.datetime.now()
     tag = datetime.datetime.today().weekday()
     tag2=6
     #Es soll eine Liste von Tagen gefüllt werden angefangen mit dem Aktuellen tag
@@ -236,9 +225,9 @@ def wochentag_definieren():
     while (len(reihenfolge))<=6:
         reihenfolge.append(tag2)
         tag2 = tag2 -1
-        print(reihenfolge)
-        wochentag=[]
-        weekdays={0:"Montag",1:"Dienstag",2:"Mittwoch",3:"Donnerstag",4:"Freitag",5:"Samstag",6:"Sonntag"}
+
+    weekdays={0:"Montag",1:"Dienstag",2:"Mittwoch",3:"Donnerstag",4:"Freitag",5:"Samstag",6:"Sonntag"}
+    wochentag = []
     for wert in reihenfolge:
         wochentag.append(weekdays[wert])
 
@@ -246,14 +235,5 @@ def wochentag_definieren():
 
 
 
-#Das erstellte Json wird geöffnet und in einem dict gespeichert
 
-with open('aktivitaeten.json') as open_file:
-    json_als_string = open_file.read()
-    mein_eingelesenes_dict = loads(json_als_string)
-
-
-auswerten_magnesium_woche(mein_eingelesenes_dict)
-
-wochentag_definieren()
 
