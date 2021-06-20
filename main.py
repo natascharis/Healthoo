@@ -35,8 +35,8 @@ with open('aktivitaeten.json') as open_file:
     mein_eingelesenes_dict = loads(json_als_string)
 
 
-woche = reversed(auswertungen.wochentag_definieren())
-kcal = reversed((auswertungen.auswerten_letzteWoche(mein_eingelesenes_dict)))
+woche = auswertungen.wochentag_definieren()
+kcal = auswertungen.auswerten_letzteWoche(mein_eingelesenes_dict)
 
 def data():
 

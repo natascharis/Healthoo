@@ -144,7 +144,7 @@ def auswerten_letzteWoche (json):
             kcal_woche.append(kcal_vorvorvorgestern)
             kcal_woche.append(kcal_vorvorvorvorgestern)
             kcal_woche.append(kcal_vorvorvorvorvorgestern)
-    return kcal_woche
+    return reversed(kcal_woche)
 
 def auswerten_magnesium_woche(json):
     aktuellesDatum = datetime.datetime.now()
@@ -231,7 +231,7 @@ def wochentag_definieren():
     for wert in reihenfolge:
         wochentag.append(weekdays[wert])
 
-    return wochentag
+    return reversed(wochentag)
 
 
 
